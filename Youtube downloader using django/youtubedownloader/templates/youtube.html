@@ -1,0 +1,16 @@
+<!-- We will use Django's post method to get the URL  (because it is secure)-->
+<!-- We also need csrf token if we are using the post method. Syntax for csrf token is -->
+{% csrf_token %}
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Youtube video downloader </h1>
+        <form action=" " method="post">
+            {% csrf_token %}
+            <label for="link"> Enter URL of Youtube Video:</label>
+            <input type="text" id="link" name="link"><br><br>
+            <br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
